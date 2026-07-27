@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y nginx python3-pip
 
 RUN pip3 install gdown
 
-# Videoyu Google Drive'dan çek (--output parametresi ile)
-RUN gdown 1H0t1gwYJTOWw67gNbb33XHOCrfcwcpyi --output /app/video1.mp4
+# Drive onay ekranını geçen fuzzy parametreli gdown komutu
+RUN gdown --fuzzy "https://drive.google.com/uc?id=1H0t1gwYJTOWw67gNbb33XHOCrfcwcpyi" -O /app/video1.mp4
 
 # Logoyu kopyala
 COPY logo.png /app/logo.png
